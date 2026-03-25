@@ -908,10 +908,6 @@ section.area::before {
 
 .job_item-title {
     color: var(--purple);
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
 }
 
 .job_item-list {
@@ -1071,9 +1067,11 @@ section.area::before {
 @media (min-width: 640px) {
 
     .area_toshin .job_item-title,
-    .area_josai .job_item-title {
+    .area_josai .job_item-title,
+    .area_jonan .job_item-title {
         min-height: 75px;
     }
+
 }
 
 @media (min-width: 1024px) {
@@ -1082,6 +1080,12 @@ section.area::before {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: auto;
         gap: 2rem;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1060px) {
+    .area_toshin .job_item-title {
+        min-height: 102px;
     }
 }
 
@@ -1111,7 +1115,7 @@ section.holiday::after {
 .holiday_title-container::before {
     content: '';
     width: 200px;
-    max-width: 20vw;
+    max-width: 15vw;
     height: 20vw;
     background: url(images/deco1.svg) no-repeat top center / contain;
     position: absolute;
@@ -1260,7 +1264,7 @@ section.pickup {
     bottom: -15%;
 }
 
-.pickup_toshin .img-container::before {
+.pickup_aoyama .img-container::before {
     content: '';
     display: block;
     position: absolute;
@@ -1271,7 +1275,7 @@ section.pickup {
     background: url(images/deco8.svg) no-repeat center center / contain;
 }
 
-.pickup_toshin .img-container::after {
+.pickup_aoyama .img-container::after {
     content: '';
     display: block;
     position: absolute;
@@ -1285,11 +1289,11 @@ section.pickup {
     animation: kakukaku 2s infinite;
 }
 
-.pickup_jonan {
+.pickup_oshiage {
     padding: 6rem 0;
 }
 
-.pickup_jonan::before {
+.pickup_oshiage::before {
     content: '';
     display: block;
     background: var(--beige);
@@ -1301,7 +1305,7 @@ section.pickup {
     border-radius: .6rem 0 0 .6rem;
 }
 
-.pickup_jonan .img-container::before {
+.pickup_oshiage .img-container::before {
     content: '';
     display: block;
     position: absolute;
@@ -1314,7 +1318,7 @@ section.pickup {
     transform-origin: center center;
 }
 
-.pickup_jonan .img-container::after {
+.pickup_oshiage .img-container::after {
     content: '';
     display: block;
     position: absolute;
@@ -1325,7 +1329,7 @@ section.pickup {
     background: url(images/deco13.png) no-repeat center center / contain;
 }
 
-.pickup_josai .img-container::after {
+.pickup_takao .img-container::after {
     content: '';
     display: block;
     position: absolute;
